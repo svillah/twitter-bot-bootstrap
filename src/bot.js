@@ -1,29 +1,29 @@
 // Dependencies =========================
-const Twit = require('twit')
-const ura = require('unique-random-array')
-const config = require('./config')
-const strings = require('./helpers/strings')
-const sentiment = require('./helpers/sentiment')
+const Twit = require('twit');
+const ura = require('unique-random-array');
+const config = require('./config');
+const strings = require('./helpers/strings');
+const sentiment = require('./helpers/sentiment');
 
 const Twitter = new Twit({
   consumer_key: config.twitter.consumerKey,
   consumer_secret: config.twitter.consumerSecret,
   access_token: config.twitter.accessToken,
   access_token_secret: config.twitter.accessTokenSecret
-})
+});
 
 // Frequency
-const retweetFrequency = config.twitter.retweet
-const favoriteFrequency = config.twitter.favorite
+const retweetFrequency = config.twitter.retweet;
+const favoriteFrequency = config.twitter.favorite;
 //  username
-const username = config.twitter.username
+const username = config.twitter.username;
 
 // RANDOM QUERY STRING  =========================
-
-let qs = ura(strings.queryString)
-let qsSq = ura(strings.queryStringSubQuery)
-let rt = ura(strings.resultType)
-let rs = ura(strings.responseString)
+"use strict";
+let qs = ura(strings.queryString);
+let qsSq = ura(strings.queryStringSubQuery);
+let rt = ura(strings.resultType);
+let rs = ura(strings.responseString);
 
 // https://dev.twitter.com/rest/reference/get/search/tweets
 // A UTF-8, URL-encoded search query of 500 characters maximum, including operators.
@@ -39,14 +39,14 @@ let rs = ura(strings.responseString)
 // * popular : return only the most popular results in the response.
 
 let retweet = function () {
-  var paramQS = qs()
-  paramQS += qsSq()
-  var paramRT = rt()
+  var paramQS = qs();
+ paramQS += qsSq();
+  var paramRT = rt();
   var params = {
     q: paramQS + paramBls(),
     result_type: paramRT,
     lang: 'en'
-  }
+  };
 
   Twitter.get('search/tweets', params, function (err, data) {
     if (!err) { // if there no errors

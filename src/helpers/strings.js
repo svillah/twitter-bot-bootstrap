@@ -1,12 +1,16 @@
 module.exports = {
   queryString: [
-    ''
+    '100daysofcode',
+    'anil dash'
   ],
   queryStringSubQuery: [
-    ''
+    '',
+    ' tip',
+    ' tricks',
+    ' recommended'
   ],
   blockedStrings: [
-    ''
+    'porn'
   ],
   resultType: [
     'mixed',
@@ -14,6 +18,6 @@ module.exports = {
     'popular'
   ],
   responseString: [
-    'Hi @screenName thanks for the following!'
+    'Hi @svillah thanks for the following!'
   ]
-}
+};
