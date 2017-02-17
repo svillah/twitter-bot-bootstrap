@@ -1,13 +1,19 @@
 module.exports = {
   queryString: [
     '100daysofcode',
-    'anil dash'
+    'anil dash',
+    'stoicism',
+    'nlp',
+    'npr',
+    'podcast',
+    'game dev'
   ],
   queryStringSubQuery: [
     '',
     ' tip',
     ' tricks',
-    ' recommended'
+    ' recommended',
+    ' best'
   ],
   blockedStrings: [
     'porn'
@@ -18,6 +24,6 @@ module.exports = {
     'popular'
   ],
   responseString: [
-    'Hi @svillah thanks for the following!'
+    'Hi @screenName thanks for the following!'
   ]
 };
