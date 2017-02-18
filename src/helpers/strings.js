@@ -1,11 +1,18 @@
 module.exports = {
   queryString: [
-    '100daysofcode',
+    'vegetarian',
     'anil dash',
-    'stoicism',
+    'fiction',
+    'product design',
+    'user experience',
+    'waterloo',
+    'women in tech',
+    'stoic',
     'nlp',
+    'linguistic',
     'npr',
     'podcast',
+    'new music',
     'game dev'
   ],
   queryStringSubQuery: [
@@ -13,6 +20,7 @@ module.exports = {
     ' tip',
     ' tricks',
     ' recommended',
+    ' news',
     ' best'
   ],
   blockedStrings: [
